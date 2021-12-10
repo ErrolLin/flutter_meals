@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meals/data/dummy_data.dart';
-import 'package:flutter_meals/screens/category_item.dart';
+import 'package:flutter_meals/widgets/category_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({Key? key}) : super(key: key);
@@ -15,8 +15,8 @@ class CategoriesScreen extends StatelessWidget {
         padding: const EdgeInsets.all(25),
         children: dummyCategories.map((item) {
           return CategoryItem(
-            item.title,
-            item.color,
+            title: item.title,
+            color: item.color,
           );
         }).toList(),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
